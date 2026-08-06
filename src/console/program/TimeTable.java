@@ -3,13 +3,13 @@ package console.program;
 import java.util.Scanner;
 
 /**
- * The Restaurant class provides the functionality needed to manage orders and checkout.
+ * The Timetable class provides the functionality needed to manage orders and checkout.
  */
-public class Restaurant {
+public class TimeTable {
 
     private String name;
     
-    public Restaurant(String name) {
+    public TimeTable(String name) {
     	this.name = name;
     }
     
@@ -23,7 +23,7 @@ public class Restaurant {
     public void run() {
     	boolean exit = false;
     	do {
-			printMenu(this.getName());
+			printMenu();
 			
 			String stringInput = readUserInput();
 			
@@ -56,9 +56,9 @@ public class Restaurant {
 	/**
      * The utility method to print menu options.
      */
-	public static void printMenu(String name){
+	public void printMenu(){
 		String banner = new String(new char[50]).replace('\u0000', '=');
-		System.out.println(banner + "\n" + "Welcome to " + name + "\n" + banner);
+		System.out.println(banner + "\n" + "Welcome to " + getName() + "\n" + banner);
 		System.out.printf("   %s%n", "a) Order");
 		System.out.printf("   %s%n", "b) Checkout");
 		System.out.printf("   %s%n", "c) Exit");
