@@ -6,8 +6,8 @@ package console.program;
 public class Main {
 	
 	public static void main(String args[]){
-		TimeTable restaurant = new TimeTable("Timetable");
-		restaurant.run();
+		TimeTable t = new TimeTable("Timetable");
+		t.run();
 	}
 
 }

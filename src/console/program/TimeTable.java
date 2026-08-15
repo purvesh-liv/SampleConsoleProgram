@@ -3,7 +3,7 @@ package console.program;
 import java.util.Scanner;
 
 /**
- * The Timetable class provides the functionality needed to manage orders and checkout.
+ * The Timetable class provides the functionality needed to manage inputs and checkout.
  */
 public class TimeTable {
 
@@ -37,13 +37,16 @@ public class TimeTable {
 			char input = stringInput.charAt(0);
 			
 			switch (input) {
-				case 'a':
-					this.order();
+				case '1':
+					this.searchToEnroll();
 					break;
-				case 'b':
-					this.checkout();
+				case '2':
+					this.showCourse();
 					break;
-				case 'c':
+				case '3':
+				     this.widraw();
+					 break;
+				case '4':
 					exit = true;
 					break;
 				default:
@@ -59,9 +62,11 @@ public class TimeTable {
 	public void printMenu(){
 		String banner = new String(new char[50]).replace('\u0000', '=');
 		System.out.println(banner + "\n" + "Welcome to " + getName() + "\n" + banner);
-		System.out.printf("   %s%n", "a) Order");
-		System.out.printf("   %s%n", "b) Checkout");
-		System.out.printf("   %s%n", "c) Exit");
+		System.out.printf("   %s%n", "1) Search by keyword to enroll");
+		System.out.printf("   %s%n", "2) Show my enrolled courses");
+		System.out.printf("   %s%n", "3) Withdraw from a course");
+		System.out.printf("   %s%n", "4) Exit");
+		
 		System.out.print("Please select: ");
 	}
 	
@@ -76,14 +81,19 @@ public class TimeTable {
     /**
      * The method to place orders.
      */
-    public void order() {
-    	System.out.println("Order food.");
+    public void searchToEnroll() {
+    	System.out.println("Search by keyword to enroll");
     }
     
     /**
      * The method to manage checkout.
      */
-    public void checkout() {
-    	System.out.println("Checkout.");
+    public void showCourse() {
+    	System.out.println("Show my enrolled courses");
     }
+
+	public void widraw(){
+		System.out.println(" Withdraw from a course");
+	}
 }
+
