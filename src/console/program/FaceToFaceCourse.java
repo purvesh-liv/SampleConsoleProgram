@@ -8,7 +8,7 @@ public class FaceToFaceCourse extends Course {
 
     // constructor
     public FaceToFaceCourse(String courseName, String year, String mode, String dayOfLecture, int startTime,
-            int duration,int capacity,int currentEnrollments) {
+            double duration,int capacity,int currentEnrollments) {
         super(courseName, year, mode, dayOfLecture, startTime, duration);
         this.capacity = capacity;
         this.currentEnrollments = currentEnrollments;

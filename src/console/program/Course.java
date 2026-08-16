@@ -7,11 +7,11 @@ public abstract class Course {
     protected String mode;
     protected String dayOfLecture;
     protected int startTime;
-    protected int duration;
+    protected double duration;
     
 
     // CONSTRUCTOR
-    public Course(String courseName, String year, String mode, String dayOfLecture, int startTime, int duration) {
+    public Course(String courseName, String year, String mode, String dayOfLecture, int startTime, double duration) {
         this.courseName = courseName;
         this.year = year;
         this.mode = mode;
@@ -33,7 +33,7 @@ public abstract class Course {
         return startTime;
     }
 
-    public int getDuration() {
+    public double getDuration() {
         return duration;
     }
 
